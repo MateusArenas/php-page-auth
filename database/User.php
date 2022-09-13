@@ -1,4 +1,4 @@
-<?php include dirname(__FILE__)."/index.php"; 
+<?php require_once(dirname(__FILE__)."/index.php"); 
 
   class User {
     public $fields;
