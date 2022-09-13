@@ -3,7 +3,7 @@
  define('ROOT_PATH', dirname($_SERVER['DOCUMENT_ROOT']."/api"));
 
 echo "DOCUMENT_ROOT: ".$_SERVER['DOCUMENT_ROOT'];
-echo "ROOT_PATH: ".$_SERVER['ROOT_PATH'];
+// echo "ROOT_PATH: ".$_SERVER['ROOT_PATH'];
 // header('Location: ../dashboard');
 
   $headers = [[ "name" => "gene"] , ["name" => "mateus"]];
@@ -19,7 +19,7 @@ echo "ROOT_PATH: ".$_SERVER['ROOT_PATH'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php include "../loaderStyleSheets.php";
+    <?php require_once("../loaderStyleSheets.php");
         loaderStyleSheets();
     ?>
 
