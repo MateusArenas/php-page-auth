@@ -7,7 +7,7 @@
       // $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
       // $user->save();
 
-      header('Location: dashboard.php');
+      header('Location: ./dashboard.php');
     
       // $results = User::find();
     
