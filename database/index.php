@@ -5,7 +5,7 @@
   $conn->query('CREATE TABLE IF NOT EXISTS "users" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     "name" VARCHAR,
-    "email" VARCHAR,
+    "email" VARCHAR
     -- "password" VARCHAR,
     -- "time" DATETIME
   )');
