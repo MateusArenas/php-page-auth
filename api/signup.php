@@ -8,7 +8,7 @@
       // $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
       // $user->save();
 
-      echo $_SERVER['REQUEST_METHOD'];
+      // echo $_SERVER['REQUEST_METHOD'];
 
       if (headers_sent()) {
          die("O redirecionamento falhou. Por favor, clique neste link: <a href=...>");
