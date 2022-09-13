@@ -10,12 +10,7 @@
 
       // echo $_SERVER['REQUEST_METHOD'];
 
-      if (headers_sent()) {
-         die("O redirecionamento falhou. Por favor, clique neste link: <a href=...>");
-      }
-      else{
-            exit(header("Location: dashboard.php"));
-      }
+      header("Location: ".dirname(__FILE__)."/dashboard.php")
 
       // $results = User::find();
     
