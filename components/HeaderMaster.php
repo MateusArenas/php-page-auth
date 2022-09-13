@@ -1,8 +1,8 @@
 <?php function HeaderMaster($props=[]) { 
 
 ?>
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a href="/" class="navbar-brand text-muted">php-example</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
