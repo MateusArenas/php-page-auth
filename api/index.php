@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php require_once("../loaderStyleSheets.php");
+    <?php include "/var/task/user/loaderStyleSheets.php";
         loaderStyleSheets();
     ?>
 
@@ -29,7 +29,7 @@
 
   <body style="background-color: #0d3642;">
 
-      <?php include "../components/HeaderMaster.php";
+      <?php include "/var/task/user/components/HeaderMaster.php";
         HeaderMaster();
         // foreach ($headers as $header) HeaderMaster($header);
       ?>
@@ -70,7 +70,7 @@
 
   </body>
 
-  <?php include "../loaderBottomScripts.php";
+  <?php include "/var/task/user/loaderBottomScripts.php";
     loaderBottomScripts();
   ?>
 </html>
