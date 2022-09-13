@@ -7,6 +7,8 @@
       // $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
       // $user->save();
 
+      echo $_SERVER['REQUEST_METHOD'];
+
       header('Location: ./dashboard.php');
     
       // $results = User::find();
