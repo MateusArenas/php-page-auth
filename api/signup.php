@@ -6,10 +6,12 @@
 
       $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
       $user->save();
+
+      header('Location: ../dashboard');
     
-      $results = User::find();
+      // $results = User::find();
     
-      echo json_encode($results);
+      // echo json_encode($results);
    //   echo "hello: ".$_POST["email"];
    //   echo "hello: ".$_SERVER['REQUEST_METHOD'];
    }
