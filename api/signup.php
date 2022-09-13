@@ -1,13 +1,19 @@
 
-<?php 
+<?php include dirname(__FILE__)."/"."../database/User.php"; 
 
-function display() {
-//   echo "hello".$_POST["email"];
-}
+   function display() {
+      $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
+      $user->save();
+    
+      $results = User::find();
+    
+      echo json_encode($results);
+   //   echo "hello".$_POST["email"];
+   }
 
-if($_SERVER['REQUEST_METHOD']=='POST') {
-  display();
-} 
+   if($_SERVER['REQUEST_METHOD']=='POST') {
+      display();
+   } 
 ?>
 
 
