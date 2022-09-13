@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "index.php": {
+      "runtime": "vercel-php@0.4.0"
+    },
+    "dashboard.php": {
+      "runtime": "vercel-php@0.4.0"
+    },
+    "signin.php": {
+      "runtime": "vercel-php@0.4.0"
+    },
+    "signup.php": {
+      "runtime": "vercel-php@0.4.0"
+    }
+  }
+}

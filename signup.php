@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <?php include "../loaderStyleSheets.php";
+      <?php include "./loaderStyleSheets.php";
         loaderStyleSheets();
       ?>
 
@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
 
    <body style="background-color: #0d3642;">
 
-      <?php include "../components/HeaderMaster.php";
+      <?php include "./components/HeaderMaster.php";
          HeaderMaster();
       ?>
 
@@ -73,7 +73,7 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
 
    </body>
 
-   <?php include "../loaderBottomScripts.php";
+   <?php include "./loaderBottomScripts.php";
       loaderBottomScripts();
    ?>
 

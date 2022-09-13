@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php include "../loaderStyleSheets.php";
+    <?php include "./loaderStyleSheets.php";
         loaderStyleSheets();
     ?>
 
@@ -19,7 +19,7 @@
       <h1>after form action, redict self to this page</h1>
   </body>
 
-  <?php include "../loaderBottomScripts.php";
+  <?php include "./loaderBottomScripts.php";
     loaderBottomScripts();
   ?>
 </html>
