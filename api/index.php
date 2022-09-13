@@ -1,8 +1,8 @@
 
 <?php 
- define('ROOT_PATH', dirname($_SERVER['DOCUMENT_ROOT']."/api"));
+//  define('ROOT_PATH', dirname($_SERVER['DOCUMENT_ROOT']."/api"));
 
-echo "DOCUMENT_ROOT: ".$_SERVER['DOCUMENT_ROOT'];
+// echo "DOCUMENT_ROOT: ".$_SERVER['DOCUMENT_ROOT'];
 // echo "ROOT_PATH: ".$_SERVER['ROOT_PATH'];
 // header('Location: ../dashboard');
 
