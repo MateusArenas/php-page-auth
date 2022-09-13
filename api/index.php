@@ -8,7 +8,6 @@
 
   $headers = [[ "name" => "gene"] , ["name" => "mateus"]];
 
-  echo dirname($_SERVER['DOCUMENT_ROOT'])."/images/banner.png"
 ?>
 
 <!DOCTYPE html>
