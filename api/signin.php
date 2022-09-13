@@ -39,7 +39,7 @@
         <div class="row g-0 my-4 align-items-center justify-content-center">
             <span style="width: 126px; height: 68px; box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
               <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;">
-                <img alt="" aria-hidden="true" src="<?php echo dirname(__FILE__)."/"."../images/logo.png" ?>" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;">
+                <img alt="" aria-hidden="true" src="<?php echo dirname($_SERVER['DOCUMENT_ROOT'])."/images/logo.png" ?>" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;">
               </span>
             </span>
           </div>
