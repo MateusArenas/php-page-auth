@@ -2,6 +2,7 @@
 <?php include dirname(__FILE__)."/"."../database/User.php"; 
 
    function display() {
+      global User;
       $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
       $user->save();
     
