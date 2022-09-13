@@ -1,5 +1,5 @@
 
-<?php define('ROOT_PATH', dirname(__FILE__));
+<?php define('ROOT_PATH', dirname('/var/task/user/api'));
 
 // header('Location: ../dashboard');
 
