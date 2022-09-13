@@ -12,7 +12,9 @@
     }
 
     static function find () {
-      $stmt = global $conn->prepare("SELECT * FROM db_users");
+      global $conn;
+
+      $stmt = $conn->prepare("SELECT * FROM db_users");
 
       $stmt->execute();
     
@@ -20,17 +22,21 @@
     }
   
     public function save () {
-      $stmt = global $conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
+      global $conn;
+
+      $stmt = $conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
     
       foreach ($this->fields as $key => &$val) $stmt->bindParam($key, $val);
 
       $stmt->execute();
 
-      $this->id = (int) global $conn->lastInsertId();
+      $this->id = (int)$conn->lastInsertId();
     }
 
     public function update ($update) {
-      $stmt = global $conn->prepare("UPDATE db_users SET name = :name, email = :email WHERE _id = :id");
+      global $conn;
+
+      $stmt = $conn->prepare("UPDATE db_users SET name = :name, email = :email WHERE _id = :id");
     
       $this->changeFields($update);
 
@@ -42,7 +48,9 @@
     }
 
     public function delete () {
-      $stmt = global $conn->prepare("DELETE FROM db_users WHERE _id = :id");
+      global $conn;
+
+      $stmt = $conn->prepare("DELETE FROM db_users WHERE _id = :id");
     
       $stmt->bindParam("id", $this->id);
 
@@ -50,7 +58,9 @@
     }
 
     static function remove ($id) {
-      $stmt = global $conn->prepare("DELETE FROM db_users WHERE _id = :id");
+      global $conn;
+
+      $stmt = $conn->prepare("DELETE FROM db_users WHERE _id = :id");
     
       $stmt->bindParam("id", $id);
 
