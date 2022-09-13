@@ -1,15 +1,15 @@
 {
   "functions": {
-    "index.php": {
+    "api/index.php": {
       "runtime": "vercel-php@0.4.0"
     },
-    "dashboard.php": {
+    "api/dashboard.php": {
       "runtime": "vercel-php@0.4.0"
     },
-    "signin.php": {
+    "api/signin.php": {
       "runtime": "vercel-php@0.4.0"
     },
-    "signup.php": {
+    "api/signup.php": {
       "runtime": "vercel-php@0.4.0"
     }
   }
