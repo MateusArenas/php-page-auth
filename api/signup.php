@@ -2,14 +2,16 @@
 <?php include dirname(__FILE__)."/"."../database/User.php"; 
 
    function display() {
-      global User;
-      $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
-      $user->save();
+      // global User;
+
+      // $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
+      // $user->save();
     
-      $results = User::find();
+      // $results = User::find();
     
-      echo json_encode($results);
-   //   echo "hello".$_POST["email"];
+      // echo json_encode($results);
+   //   echo "hello: ".$_POST["email"];
+     echo "hello: ".$_SERVER['REQUEST_METHOD']
    }
 
    if($_SERVER['REQUEST_METHOD']=='POST') {
