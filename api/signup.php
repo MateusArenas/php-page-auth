@@ -1,6 +1,5 @@
 
-<?php 
-// require_once(dirname(__FILE__)."/"."../database/User.php"); 
+<?php require_once(dirname(__FILE__)."/"."../database/User.php"); 
 
    function display() {
       // global User;
@@ -12,7 +11,7 @@
     
       // echo json_encode($results);
    //   echo "hello: ".$_POST["email"];
-     echo "hello: ".$_SERVER['REQUEST_METHOD']
+     echo "hello: ".$_SERVER['REQUEST_METHOD'];
    }
 
    if($_SERVER['REQUEST_METHOD']=='POST') {
