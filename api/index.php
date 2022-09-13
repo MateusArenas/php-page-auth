@@ -1,6 +1,6 @@
 
 <?php 
-//  define('ROOT_PATH', dirname($_SERVER['DOCUMENT_ROOT']."/api"));
+//  define('ROOT_PATH', dirname($_SERVER['DOCUMENT_ROOT']));
 
 // echo "DOCUMENT_ROOT: ".$_SERVER['DOCUMENT_ROOT'];
 // echo "ROOT_PATH: ".$_SERVER['ROOT_PATH'];
@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php require_once(dirname(__FILE__) . "/../loaderStyleSheets.php");
+    <?php include dirname(__FILE__) . "/../loaderStyleSheets.php";
         loaderStyleSheets();
     ?>
 
@@ -29,7 +29,7 @@
 
   <body style="background-color: #0d3642;">
 
-      <?php include "/var/task/user/components/HeaderMaster.php";
+      <?php include dirname(__FILE__) . "/../components/HeaderMaster.php";
         HeaderMaster();
         // foreach ($headers as $header) HeaderMaster($header);
       ?>
@@ -70,7 +70,7 @@
 
   </body>
 
-  <?php include "/var/task/user/loaderBottomScripts.php";
+  <?php include dirname(__FILE__)."/../loaderBottomScripts.php";
     loaderBottomScripts();
   ?>
 </html>
