@@ -10,7 +10,13 @@
 
       echo $_SERVER['REQUEST_METHOD'];
 
-      exit(header("Location: /dashboard.php"));
+      if (headers_sent()) {
+         die("O redirecionamento falhou. Por favor, clique neste link: <a href=...>");
+      }
+      else{
+            exit(header("Location: dashboard.php"));
+      }
+
       // $results = User::find();
     
       // echo json_encode($results);
