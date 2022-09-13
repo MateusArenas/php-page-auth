@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php include "/var/task/user/loaderStyleSheets.php";
+    <?php include "/var/task/user/api/..loaderStyleSheets.php";
         loaderStyleSheets();
     ?>
 
