@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php include dirname(__FILE__) . "/../loaderStyleSheets.php";
+    <?php include dirname(__FILE__)."/"."../loaderStyleSheets.php";
         loaderStyleSheets();
     ?>
 
@@ -29,7 +29,7 @@
 
   <body style="background-color: #0d3642;">
 
-      <?php include dirname(__FILE__) . "/../components/HeaderMaster.php";
+      <?php include dirname(__FILE__)."/"."../components/HeaderMaster.php";
         HeaderMaster();
         // foreach ($headers as $header) HeaderMaster($header);
       ?>
@@ -61,7 +61,7 @@
                     <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
                       <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27569%27%20height=%27555%27/%3e">
                     </span>
-                    <img alt="image-profile" src="<?php echo dirname(__FILE__)."/../images/banner.png" ?>" decoding="async" data-nimg="intrinsic" class="img-fluid rounded" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:65%;max-height:100%" >
+                    <img alt="image-profile" src="<?php echo dirname(__FILE__)."/"."../images/banner.png" ?>" decoding="async" data-nimg="intrinsic" class="img-fluid rounded" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:65%;max-height:100%" >
                   </span>
               </div>
             </div>
@@ -70,7 +70,7 @@
 
   </body>
 
-  <?php include dirname(__FILE__)."/../loaderBottomScripts.php";
+  <?php include dirname(__FILE__)."/"."../loaderBottomScripts.php";
     loaderBottomScripts();
   ?>
 </html>
