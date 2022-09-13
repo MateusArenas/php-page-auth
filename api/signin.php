@@ -50,7 +50,7 @@
                     <h1 class="fs-4 mb-0">Sign in to php-example</h1>
                   </div>
                   <div class="card-body">
-                    <form method="post" action="signup.php">
+                    <form method="post" action="signin.php">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">email</label>
                           <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
