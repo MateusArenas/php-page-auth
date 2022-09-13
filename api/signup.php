@@ -2,16 +2,16 @@
 <?php require_once(dirname(__FILE__)."/"."../database/User.php"); 
 
    function display() {
-      // global User;
+      global User;
 
-      // $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
-      // $user->save();
+      $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
+      $user->save();
     
-      // $results = User::find();
+      $results = User::find();
     
-      // echo json_encode($results);
+      echo json_encode($results);
    //   echo "hello: ".$_POST["email"];
-     echo "hello: ".$_SERVER['REQUEST_METHOD'];
+   //   echo "hello: ".$_SERVER['REQUEST_METHOD'];
    }
 
    if($_SERVER['REQUEST_METHOD']=='POST') {
