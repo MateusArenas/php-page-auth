@@ -10,8 +10,7 @@
 
       echo $_SERVER['REQUEST_METHOD'];
 
-      header('Location: dashboard.php');
-    
+      exit(header("Location: /dashboard.php"));
       // $results = User::find();
     
       // echo json_encode($results);
