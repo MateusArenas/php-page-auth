@@ -1,5 +1,6 @@
 
-<?php require_once(dirname(__FILE__)."/"."../database/User.php"); 
+<?php 
+// require_once(dirname(__FILE__)."/"."../database/User.php"); 
 
    function display() {
       // global User;
@@ -9,7 +10,7 @@
 
       echo $_SERVER['REQUEST_METHOD'];
 
-      header('Location: ./dashboard.php');
+      // header('Location: ./dashboard.php');
     
       // $results = User::find();
     
