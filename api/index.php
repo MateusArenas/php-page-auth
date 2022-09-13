@@ -1,6 +1,8 @@
 
-<?php define('ROOT_PATH', dirname('/var/task/user/api/index.php'));
+<?php 
+// define('ROOT_PATH', dirname('/var/task/user/api/index.php'));
 
+echo $_SERVER['DOCUMENT_ROOT'];
 // header('Location: ../dashboard');
 
   $headers = [[ "name" => "gene"] , ["name" => "mateus"]];
