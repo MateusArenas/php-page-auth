@@ -1,3 +1,11 @@
+<?php require_once(dirname(__FILE__)."/"."../database/User.php");
+
+    $results = User::find();
+  
+    echo json_encode($results);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
