@@ -2,10 +2,8 @@
 
   // require(dirname(__FILE__)."/"."../database/User.php"); 
 
-  $results = User::find();
+  $users = User::find();
   
-  echo json_encode($results);
-
   // session_unset($_SESSION['email']);
   // echo $_SESSION['email'];
   // session_destroy();
@@ -32,6 +30,14 @@
 
   <body>
       <h1>after form action, redict self to this page</h1>
+
+      <div class="list-group">
+
+        <?php include dirname(__FILE__)."/"."../components/CardComponent.php";
+          foreach ($users as $user) CardComponent($user);
+        ?>
+
+      </div>
   </body>
 
   <?php include dirname(__FILE__)."/"."../loaderBottomScripts.php";
