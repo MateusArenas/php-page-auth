@@ -20,8 +20,8 @@
     }
 
     static function find () {
+      global $conn;
       try {
-        global $conn;
         // $stmt = $this->conn->prepare('SELECT * FROM "db_users"');
 
         $stmt = $conn->query('SELECT * FROM "db_users"');
@@ -39,8 +39,8 @@
     }
   
     public function save () {
+      global $conn;
       try {
-        global $conn;
 
         $stmt = $conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
       
@@ -81,7 +81,7 @@
 
     static function remove ($id) {
       global $conn;
-      
+
       $stmt = $conn->prepare("DELETE FROM db_users WHERE _id = :id");
     
       $stmt->bindParam("id", $id);
