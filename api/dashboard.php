@@ -1,4 +1,4 @@
-<?php require_once(dirname(__FILE__)."/"."../database/User.php"); 
+<?php require(dirname(__FILE__)."/"."../database/User.php"); 
 
     // $results = User::find();
   
