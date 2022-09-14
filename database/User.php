@@ -19,7 +19,7 @@
 
         $stmt = $conn->query('SELECT * FROM "db_users"');
 
-        $results = $result2->fetchAll(PDO::FETCH_ASSOC);
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // $stmt->execute();
 
