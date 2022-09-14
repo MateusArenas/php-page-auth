@@ -4,7 +4,6 @@
   
   echo json_encode($results);
 
-   $conn->close();
 ?>
 
 <!DOCTYPE html>

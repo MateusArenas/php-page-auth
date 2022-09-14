@@ -1,4 +1,7 @@
-<?php require(dirname(__FILE__)."/index.php"); 
+<?php 
+  if (!isset($conn)) {
+    require(dirname(__FILE__)."/index.php"); 
+  }
 
   class User {
     public $fields;

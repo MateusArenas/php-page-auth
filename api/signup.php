@@ -22,7 +22,6 @@
       display();
    } 
 
-   $conn->close();
 ?>
 
 
