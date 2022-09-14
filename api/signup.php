@@ -10,13 +10,13 @@
 
       // echo $_SERVER['REQUEST_METHOD'];
 
-      header("Location: ".dirname(__FILE__)."/dashboard.php")
+      // header("Location: ".dirname(__FILE__)."/dashboard.php")
 
       // $results = User::find();
     
       // echo json_encode($results);
-   //   echo "hello: ".$_POST["email"];
-   //   echo "hello: ".$_SERVER['REQUEST_METHOD'];
+      // echo "hello: ".$_POST["email"];
+      echo "hello: ".$_SERVER['REQUEST_METHOD'];
    }
 
    if($_SERVER['REQUEST_METHOD']=='POST') {
