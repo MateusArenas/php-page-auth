@@ -23,7 +23,6 @@
   
     public function save () {
       global $conn;
-
       $stmt = $conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
     
       foreach ($this->fields as $key => &$val) $stmt->bindParam($key, $val);
