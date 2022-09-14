@@ -15,11 +15,11 @@
       try {
         global $conn;
 
-        $stmt = $conn->prepare("SELECT * FROM db_users");
+        $stmt = $conn->prepare('SELECT * FROM "db_users"');
 
         $stmt->execute();
 
-        $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $results = $stmt->fetch(\PDO::FETCH_ASSOC);
       
         return $results;
       } catch(\PDOException $e) {
