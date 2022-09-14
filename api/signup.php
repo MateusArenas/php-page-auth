@@ -9,6 +9,10 @@
       $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
       $user->save();
 
+      $results = User::find();
+  
+      echo json_encode($results);
+
       $_SESSION["email"] = "gene@gmail.com";
 
       // echo $_SERVER['REQUEST_METHOD'];
