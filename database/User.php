@@ -6,7 +6,7 @@
     public $id;
 
     public function __construct($fields) {
-        $this->conn = new PDO('sqlite:/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+        $this->conn = new PDO('sqlite:/tmp/db.sqlite',SQLITE3_OPEN_READWRITE);
         $this->conn->query('CREATE TABLE IF NOT EXISTS "db_users" (
           "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
           "name" VARCHAR,
@@ -20,7 +20,7 @@
 
     static function find () {
       try {
-        $conn = new PDO('sqlite:/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+        $conn = new PDO('sqlite:/tmp/db.sqlite',SQLITE3_OPEN_READWRITE);
         // $stmt = $this->conn->prepare('SELECT * FROM "db_users"');
 
         $stmt = $conn->query('SELECT * FROM "db_users"');
