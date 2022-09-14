@@ -65,7 +65,7 @@
                <div class="card-body">
                   <form  method="post" action="signup.php">
                      <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Name</label><input type="username" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp"></div>
-                     <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : "" ?>"></div>
+                     <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="<?php echo isset($_GET["email"]) ? $_GET["email"] : "" ?>"></div>
                      <div class="row">
                         <div class="col-12 col-lg-6">
                            <div class="mb-3"><label for="exampleInputPassword1" class="form-label">Password</label><input type="password" class="form-control" id="exampleInputPassword1" name="password" ></div>

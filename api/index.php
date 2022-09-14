@@ -43,7 +43,7 @@
                     <div class="card-body">
                         <h1 class="card-title">Let's build from here, together.</h1>
                         <p class="card-text">Create an account to test login, sign up and session.</p>
-                        <form class="row g-2" method="post" action="signup.php">
+                        <form class="row g-2" method="get" action="signup.php">
                           <div class="col-12 col-md-8">
                             <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                           </div>
