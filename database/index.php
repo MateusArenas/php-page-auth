@@ -12,4 +12,10 @@
     die($e);
   }
 
+  $result = $conn->query("SELECT `name` FROM sqlite_master WHERE `type`='table'  ORDER BY name");
+  if($result){
+      while($row = $result->fetch(PDO::FETCH_ASSOC)){
+        echo '<li>'.$row['name'].'</li>';
+      }
+  }
 ?>
