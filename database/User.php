@@ -1,8 +1,5 @@
 <?php 
 
-  DB_FILE_PATH = "/tmp/db.sqlite";
-  DB_FILE_PATH = "/tmp/db.sqlite";
-
   class User {
     public $conn;
     public $fields;
