@@ -6,7 +6,7 @@
 
     $filename = "database".DIRECTORY_SEPARATOR.$class_name.".php";
 
-    if (file_exists($filename)) {
+    if (file_exists(dirname(__FILE__).DIRECTORY_SEPARATOR.$filename)) {
       require_once($filename);
     }
 
