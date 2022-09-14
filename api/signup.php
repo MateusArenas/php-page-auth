@@ -6,6 +6,7 @@
    function display() {
       // global User;
 
+      chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0666);
       $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
       $db->query('CREATE TABLE IF NOT EXISTS "db_users" (
