@@ -48,9 +48,12 @@
 
    <body style="background-color: #0d3642;">
 
+
       <?php include dirname(__FILE__)."/"."../components/HeaderMaster.php";
          HeaderMaster();
       ?>
+
+      <a href="signin.php">Dashboard</a>
 
    <div class="container py-4 bottom-tab-content-offset" >
       <div class="row g-0 my-4 align-items-center justify-content-center">
