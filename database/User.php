@@ -1,5 +1,4 @@
 <?php 
-  echo "sqlite:"."/tmp/db.sqlite";
 
   class User {
     public $conn;
@@ -7,7 +6,7 @@
     public $id;
 
     public function __construct($fields) {
-        $this->conn = new PDO("sqlite:"."/tmp/db.sqlite");
+        $this->conn = new PDO("sqlite:/tmp/db.sqlite");
         $this->conn->query('CREATE TABLE IF NOT EXISTS "db_users" (
           "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
           "name" VARCHAR,
@@ -22,7 +21,7 @@
 
     static function find () {
       try {
-        $conn = new PDO("sqlite:"."/tmp/db.sqlite");
+        $conn = new PDO("sqlite:/tmp/db.sqlite");
         // $stmt = $this->conn->prepare('SELECT * FROM "db_users"');
 
         $stmt = $conn->query('SELECT * FROM "db_users" ORDER BY "created_at" ASC');
@@ -77,7 +76,7 @@
     }
 
     static function remove ($id) {
-      $conn = new PDO("sqlite:"."/tmp/db.sqlite");
+      $conn = new PDO("sqlite:/tmp/db.sqlite");
 
       $stmt = $conn->prepare("DELETE FROM db_users WHERE _id = :id");
     
