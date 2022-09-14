@@ -1,11 +1,15 @@
 
-<?php require(dirname(__FILE__)."/"."../database/User.php"); 
+<?php require_once(dirname(__FILE__)."/"."../config.php"); 
+
+   require(dirname(__FILE__)."/"."../database/User.php"); 
 
    function display() {
       // global User;
 
       $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
       $user->save();
+
+      $_SESSION["email"] = "gene@gmail.com";
 
       // echo $_SERVER['REQUEST_METHOD'];
 

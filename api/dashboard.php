@@ -1,9 +1,16 @@
-<?php require(dirname(__FILE__)."/"."../database/User.php"); 
+<?php require_once(dirname(__FILE__)."/"."../config.php"); 
+
+  require(dirname(__FILE__)."/"."../database/User.php"); 
 
   $results = User::find();
   
   echo json_encode($results);
 
+  // session_unset($_SESSION['email']);
+  // echo $_SESSION['email'];
+  // session_destroy();
+
+  // echo session_id();
 ?>
 
 <!DOCTYPE html>
