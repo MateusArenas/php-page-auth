@@ -21,7 +21,7 @@
 
   $result2 = $conn->query('SELECT * FROM "db_users"');
   $re = $conn->fetchAll(PDO::FETCH_ASSOC);
-  echo json_encode($re)
+  echo json_encode($re);
   // if($result2){
   //     while($row = $result2->fetch(PDO::FETCH_ASSOC)){
   //       echo '<li>'.$row['name'].'</li>';
