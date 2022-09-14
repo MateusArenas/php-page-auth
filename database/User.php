@@ -11,7 +11,7 @@
           "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
           "name" VARCHAR,
           "email" VARCHAR,
-          "createdAt" DATE DEFAULT (datetime('now','localtime'))
+          "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )');
         $this->fields = [
           "name" => $fields["name"],
