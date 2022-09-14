@@ -12,25 +12,33 @@
     }
 
     static function find () {
-      global $conn;
+      try {
+        global $conn;
 
-      $stmt = $conn->query("SELECT * FROM db_users");
+        $stmt = $conn->prepare("SELECT * FROM db_users");
 
-      // $stmt->execute();
-    
-      return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $stmt->execute();
+      
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+      } catch(\PDOException $e) {
+        die($e);
+      }
     }
   
     public function save () {
-      global $conn;
-      $stmt = $conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
-    
-      foreach ($this->fields as $key => &$val) $stmt->bindParam($key, $val);
+      try {
+        global $conn;
+        $stmt = $conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
+      
+        foreach ($this->fields as $key => &$val) $stmt->bindParam($key, $val);
 
-      $stmt->execute();
+        $stmt->execute();
 
-      $this->id = (int)$conn->lastInsertId();
-      // $this->id = (int)SQLite3::lastInsertRowID();
+        $this->id = (int)$conn->lastInsertId();
+        // $this->id = (int)SQLite3::lastInsertRowID();
+      } catch(\PDOException $e) {
+        die($e);
+      }
     }
 
     public function update ($update) {
