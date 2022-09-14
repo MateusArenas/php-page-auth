@@ -34,7 +34,7 @@
       <div class="list-group">
 
         <?php include dirname(__FILE__)."/"."../components/CardComponent.php";
-          foreach ($users as $user) CardComponent($user);
+          foreach ($users as $user) CardComponent([ ...$user, "time"-> date_format($user["created_at"],"Y/m/d H:i:s") ]);
         ?>
 
       </div>
