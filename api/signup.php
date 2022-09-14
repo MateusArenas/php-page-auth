@@ -6,7 +6,7 @@
    function display() {
       // global User;
 
-      $db = new SQLite3('/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+      $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
       $db->query('CREATE TABLE IF NOT EXISTS "db_users" (
          "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -38,7 +38,7 @@
     
       // echo json_encode($results);
       // echo "hello: ".$_POST["email"];
-      echo "hello: ".$_SERVER['REQUEST_METHOD']." : ".$user->id;
+      // echo "hello: ".$_SERVER['REQUEST_METHOD']." : ".$user->id;
    }
 
    if($_SERVER['REQUEST_METHOD']=='POST') {
