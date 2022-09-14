@@ -1,12 +1,15 @@
 <?php 
 
+  DB_FILE_PATH = "/tmp/db.sqlite";
+  DB_FILE_PATH = "/tmp/db.sqlite";
+
   class User {
     public $conn;
     public $fields;
     public $id;
 
     public function __construct($fields) {
-        $this->conn = new PDO("sqlite:".dirname(__FILE__).DIRECTORY_SEPARATOR."local.sqlite");
+        $this->conn = new PDO("sqlite:/tmp/db.sqlite");
         $this->conn->query('CREATE TABLE IF NOT EXISTS "db_users" (
           "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
           "name" VARCHAR,
@@ -21,7 +24,7 @@
 
     static function find () {
       try {
-        $conn = new PDO("sqlite:".dirname(__FILE__).DIRECTORY_SEPARATOR."local.sqlite");
+        $conn = new PDO("sqlite:/tmp/db.sqlite");
         // $stmt = $this->conn->prepare('SELECT * FROM "db_users"');
 
         $stmt = $conn->query('SELECT * FROM "db_users" ORDER BY "created_at" ASC');
@@ -76,7 +79,7 @@
     }
 
     static function remove ($id) {
-      $conn = new PDO("sqlite:".dirname(__FILE__).DIRECTORY_SEPARATOR."local.sqlite");
+      $conn = new PDO("sqlite:/tmp/db.sqlite");
 
       $stmt = $conn->prepare("DELETE FROM db_users WHERE _id = :id");
     
