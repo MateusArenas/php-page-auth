@@ -29,17 +29,43 @@
   </head>
 
   <body>
-      <h1>after form action, redict self to this page</h1>
+      <?php include dirname(__FILE__)."/"."../components/HeaderMaster.php";
+         HeaderMaster();
+      ?>
 
-      <div class="list-group">
+      <div class="container">
+        <h1 class="my-4">All users in php-example</h1>
 
-        <?php include dirname(__FILE__)."/"."../components/CardComponent.php";
-          foreach ($users as $user) CardComponent([ 
-            ...$user, 
-            "time"=> date_format(date_create($user["created_at"]),"Y/m/d H:i:s") 
-          ]);
-        ?>
+        <div class="list-group  my-4">
+  
+          <?php require_once dirname(__FILE__)."/"."../components/CardComponent.php";
+            foreach ($users as $user) {
+              if ($_SESSION["email"] === $user["email"]) {
+                CardComponent([ 
+                  ...$user, 
+                  "disabled"=> false,
+                  "active"=> true,
+                  "time"=> date_format(date_create($user["created_at"]),"Y/m/d") 
+                ]);
+              }
+            }
+          ?>
 
+        </div>
+  
+        <div class="list-group my-4">
+  
+          <?php require_once dirname(__FILE__)."/"."../components/CardComponent.php";
+            foreach ($users as $user) CardComponent([ 
+              ...$user, 
+              "disabled"=> $_SESSION["email"] === $user["email"],
+              "active"=> false,
+              "time"=> date_format(date_create($user["created_at"]),"Y/m/d") 
+            ]);
+          ?>
+  
+        </div>
+        
       </div>
   </body>
 

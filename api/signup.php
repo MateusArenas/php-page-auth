@@ -6,19 +6,14 @@
    function display() {
       // global User;
 
-      $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
+      $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"] ]);
       $user->save();
-
-      echo "<br>";
-      echo "geneilson";
-      echo "<br>";
-      echo "<br>";
 
       $results = User::find();
   
       echo json_encode($results);
 
-      $_SESSION["email"] = "gene@gmail.com";
+      $_SESSION["email"] = $_POST["email"];
 
       // echo $_SERVER['REQUEST_METHOD'];
 
@@ -61,8 +56,6 @@
       <?php include dirname(__FILE__)."/"."../components/HeaderMaster.php";
          HeaderMaster();
       ?>
-
-      <a href="dashboard.php">Dashboard</a>
 
    <div class="container py-4 bottom-tab-content-offset" >
       <div class="row g-0 my-4 align-items-center justify-content-center">

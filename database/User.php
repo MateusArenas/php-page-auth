@@ -24,7 +24,7 @@
         $conn = new PDO("sqlite:".dirname(__FILE__).DIRECTORY_SEPARATOR."local.sqlite");
         // $stmt = $this->conn->prepare('SELECT * FROM "db_users"');
 
-        $stmt = $conn->query('SELECT * FROM "db_users"');
+        $stmt = $conn->query('SELECT * FROM "db_users" ORDER BY "created_at" ASC');
 
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

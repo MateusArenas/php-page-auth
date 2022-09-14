@@ -10,7 +10,8 @@
                 </button>
                 <div class="navbar-collapse collapse" id="navbarToggleExternalContent">
                 <div class="me-auto navbar-nav">
-                    <!-- <a href="#features" data-rr-ui-event-key="#features" class="nav-link">Features</a><a href="#pricing" data-rr-ui-event-key="#pricing" class="nav-link">Pricing</a> -->
+                    <a href="dashboard.php" data-rr-ui-event-key="#dashboard" class="nav-link">dashboard</a>
+                    <!-- <a href="#pricing" data-rr-ui-event-key="#pricing" class="nav-link">Pricing</a> -->
                     <!-- <div class="nav-item dropdown"><a id="collasible-nav-dropdown" aria-expanded="false" role="button" class="dropdown-toggle nav-link" tabindex="0" href="#">Dropdown</a></div> -->
                 </div>
                 <div class="navbar-nav"><a href="signin.php" data-rr-ui-event-key="#deets" class="nav-link me-2">Sign In</a><a href="signup.php" data-rr-ui-event-key="2" class="btn btn-outline-light">Sign Up</a></div>
