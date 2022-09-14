@@ -1,6 +1,11 @@
 <?php 
 
-  $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:".$_SERVER['DOCUMENT_ROOT']."/2022/tmp/db.sqlite";
+  $tmpsqlite = "/tmp/db.sqlite";
+  if (file_exists(tmpsqlite)) {
+    $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:"."/tmp/db.sqlite";
+  } else {
+    $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:".$_SERVER['DOCUMENT_ROOT']."/2022/tmp/db.sqlite";
+  }
 
   echo $GLOBALS['SQLITE_FILE_PATH'];
 
