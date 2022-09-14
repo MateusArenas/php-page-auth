@@ -1,22 +1,21 @@
 
-<?php 
-// require_once(dirname(__FILE__)."/"."../database/User.php"); 
+<?php require_once(dirname(__FILE__)."/"."../database/User.php"); 
 
    function display() {
-      // global User;
+      global User;
 
-      // $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
-      // $user->save();
+      $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
+      $user->save();
 
       // echo $_SERVER['REQUEST_METHOD'];
 
       // header("Location: ".dirname(__FILE__)."/dashboard.php")
 
-      // $results = User::find();
+      $results = User::find();
     
-      // echo json_encode($results);
+      echo json_encode($results);
       // echo "hello: ".$_POST["email"];
-      echo "hello: ".$_SERVER['REQUEST_METHOD'];
+      // echo "hello: ".$_SERVER['REQUEST_METHOD'];
    }
 
    if($_SERVER['REQUEST_METHOD']=='POST') {
@@ -63,7 +62,7 @@
                   <h1 class="fs-4 mb-0">Sign up to php-example</h1>
                </div>
                <div class="card-body">
-                  <form  method="post" action="signup.php">
+                  <form method="post" action="signup.php">
                      <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Name</label><input type="username" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp"></div>
                      <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="<?php echo isset($_GET["email"]) ? $_GET["email"] : "" ?>"></div>
                      <div class="row">
