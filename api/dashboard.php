@@ -12,7 +12,7 @@
   // session_destroy();
 
   // echo session_id();
-  echo $users;
+  echo json_encode($users);
 ?>
 
 <!DOCTYPE html>
