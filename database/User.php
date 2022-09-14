@@ -6,7 +6,9 @@
     public $id;
 
     public function __construct($fields) {
-        $this->conn = new PDO("sqlite:/tmp/db.sqlite");
+        $this->conn = new PDO("sqlite:/tmp/db.sqlite", "","",array(
+          PDO::ATTR_PERSISTENT => true
+        ));
         $this->conn->query('CREATE TABLE IF NOT EXISTS "db_users" (
           "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
           "name" VARCHAR,
