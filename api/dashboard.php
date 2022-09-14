@@ -1,8 +1,10 @@
 <?php require(dirname(__FILE__)."/"."../database/User.php"); 
 
-    $results = User::find();
+  $results = User::find();
   
-    echo json_encode($results);
+  echo json_encode($results);
+
+   $conn->close();
 ?>
 
 <!DOCTYPE html>
