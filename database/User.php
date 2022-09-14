@@ -22,9 +22,10 @@
 
     static function find () {
       try {
+        $conn = new PDO('sqlite:/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
         // $stmt = $this->conn->prepare('SELECT * FROM "db_users"');
 
-        $stmt = $this->conn->query('SELECT * FROM "db_users"');
+        $stmt = $conn->query('SELECT * FROM "db_users"');
 
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -74,7 +75,9 @@
     }
 
     static function remove ($id) {
-      $stmt = $this->conn->prepare("DELETE FROM db_users WHERE _id = :id");
+      $conn = new PDO('sqlite:/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+
+      $stmt = $conn->prepare("DELETE FROM db_users WHERE _id = :id");
     
       $stmt->bindParam("id", $id);
 
