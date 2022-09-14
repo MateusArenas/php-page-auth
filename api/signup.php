@@ -15,7 +15,7 @@
     
       // echo json_encode($results);
       // echo "hello: ".$_POST["email"];
-      echo "hello: ".$_SERVER['REQUEST_METHOD'];
+      echo "hello: ".$_SERVER['REQUEST_METHOD']." : ".$user->id;
    }
 
    if($_SERVER['REQUEST_METHOD']=='POST') {
