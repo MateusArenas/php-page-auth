@@ -29,7 +29,7 @@
 
       $stmt->execute();
 
-      $this->id = (int)$conn->last_insert_rowid();
+      $this->id = (int)$conn->lastInsertRowID();
     }
 
     public function update ($update) {
