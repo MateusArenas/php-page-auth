@@ -4,8 +4,8 @@
    function display() {
       // global User;
 
-      // $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
-      // $user->save();
+      $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
+      $user->save();
 
       // echo $_SERVER['REQUEST_METHOD'];
 
