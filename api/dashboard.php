@@ -7,7 +7,7 @@
 
   // $users = User::find();
 
-  $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+  $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
 
   $results = $db->query('SELECT * FROM "db_users" ORDER BY "created_at" ASC');
 
