@@ -18,4 +18,12 @@
         echo '<li>'.$row['name'].'</li>';
       }
   }
+
+  $stmt = $conn->prepare('SELECT * FROM "db_users"');
+
+  $stmt->execute();
+
+  $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+  echo json_encode($results);
 ?>
