@@ -29,7 +29,8 @@
 
       $stmt->execute();
 
-      $this->id = (int)$conn->lastInsertRowID();
+      $this->id = (int)$conn->lastInsertId();
+      // $this->id = (int)SQLite3::lastInsertRowID();
     }
 
     public function update ($update) {

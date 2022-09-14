@@ -1,6 +1,6 @@
 <?php 
 
-  $conn = new SQLite3('/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+  $conn = new PDO('sqlite:/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
   $conn->query('CREATE TABLE IF NOT EXISTS "db_users" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
