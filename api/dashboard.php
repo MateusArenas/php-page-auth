@@ -2,16 +2,25 @@
 
   // require(dirname(__FILE__)."/"."../database/User.php"); 
 
-  $user1 = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
-  $user1->save();
+  // $user1 = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
+  // $user1->save();
 
-  $users = User::find();
+  // $users = User::find();
+
+  $db = new SQLite3('/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+
+  $results = $db->query('SELECT * FROM "db_users" ORDER BY "created_at" ASC');
+
+  while ($row = $results->fetchArray()) {
+    var_dump($row);
+  };
   
   // session_unset($_SESSION['email']);
   // echo $_SESSION['email'];
   // session_destroy();
 
   // echo session_id();
+  $users = [];
   echo json_encode($users);
 ?>
 

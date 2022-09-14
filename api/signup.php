@@ -6,12 +6,27 @@
    function display() {
       // global User;
 
-      $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"] ]);
-      $user->save();
+      $db = new SQLite3('/tmp/db.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-      $results = User::find();
-  
-      echo json_encode($results);
+      $db->query('CREATE TABLE IF NOT EXISTS "db_users" (
+         "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+         "name" VARCHAR,
+         "email" VARCHAR,
+         "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )');
+
+      $statement = $db->prepare('INSERT INTO "db_users" ("email", "name") VALUES (:email, :name)');
+      $statement->bindValue(':email', $_POST["email"]);
+      $statement->bindValue(':name', $_POST["name"]);
+      $statement->execute();
+
+
+      // $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"] ]);
+      // $user->save();
+
+      // $results = User::find();
+//   
+      // echo json_encode($results);
 
       $_SESSION["email"] = $_POST["email"];
 
