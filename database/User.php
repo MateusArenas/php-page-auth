@@ -15,7 +15,7 @@
       try {
         global $conn;
 
-        $stmt = $conn->prepare('SELECT * FROM "db_users"');
+        $stmt = $conn->prepare("SELECT * FROM db_users");
 
         $stmt->execute();
 
