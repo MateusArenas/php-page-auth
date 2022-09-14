@@ -1,6 +1,6 @@
 <?php require_once(dirname(__FILE__)."/"."../config.php"); 
 
-  require(dirname(__FILE__)."/"."../database/User.php"); 
+  // require(dirname(__FILE__)."/"."../database/User.php"); 
 
   $results = User::find();
   
