@@ -14,12 +14,11 @@
     static function find () {
       global $conn;
 
-      // $stmt = $conn->prepare("SELECT * FROM db_users");
+      $stmt = $conn->prepare("SELECT * FROM db_users");
 
-      // $stmt->execute();
+      $stmt->execute();
     
-      // return $stmt->fetchAll();
-      return $conn->query("SELECT * FROM db_users");
+      return $stmt->fetchAll();
     }
   
     public function save () {
