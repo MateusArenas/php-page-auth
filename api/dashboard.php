@@ -2,8 +2,8 @@
 
   // require(dirname(__FILE__)."/"."../database/User.php"); 
 
-  $user1 = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
-  $user1->save();
+  // $user1 = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
+  // $user1->save();
 
   $users = User::find();
   
@@ -12,6 +12,7 @@
   // session_destroy();
 
   // echo session_id();
+  echo $users;
 ?>
 
 <!DOCTYPE html>
