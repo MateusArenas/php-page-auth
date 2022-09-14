@@ -9,6 +9,10 @@
       $user = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
       $user->save();
 
+      echo "<br>";
+      echo "geneilson";
+      echo "<br>";
+
       $results = User::find();
   
       echo json_encode($results);
