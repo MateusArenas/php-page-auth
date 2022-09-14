@@ -10,7 +10,8 @@
         $this->conn->query('CREATE TABLE IF NOT EXISTS "db_users" (
           "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
           "name" VARCHAR,
-          "email" VARCHAR
+          "email" VARCHAR,
+          "createdAt" DATE DEFAULT (datetime('now','localtime'))
         )');
         $this->fields = [
           "name" => $fields["name"],
