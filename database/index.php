@@ -19,11 +19,11 @@
       }
   }
 
-  $stmt = $conn->prepare('SELECT * FROM "db_users"');
+  $result2 = $conn->query('SELECT * FROM "db_users"');
+  if($result2){
+      while($row = $result2->fetch(PDO::FETCH_ASSOC)){
+        echo '<li>'.$row['name'].'</li>';
+      }
+  }
 
-  $stmt->execute();
-
-  $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-
-  echo json_encode($results);
 ?>
