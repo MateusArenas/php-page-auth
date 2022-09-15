@@ -2,7 +2,7 @@
 <?php require_once(dirname(__FILE__)."/"."../config.php"); 
 
    if (!is_writable($GLOBALS['SQLITE_FILE_PATH'])) {
-      header("Location: /dashboard.php")
+      header("Location: /dashboard.php");
    }
 
    // require(dirname(__FILE__)."/"."../database/User.php"); 
@@ -41,6 +41,7 @@
 
       if ($ok) {
          $_SESSION["email"] = $_POST["email"];
+         header("Location: /dashboard.php");
       }
 
 
