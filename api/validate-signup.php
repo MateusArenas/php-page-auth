@@ -6,7 +6,7 @@
 
       if ($ok) {
         $_SESSION["email"] = $_POST["email"];
-        header("Location: dashboard.php");
+        exit(header("Location: dashboard.php"));
       }
    }
 
