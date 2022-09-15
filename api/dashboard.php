@@ -41,13 +41,14 @@
 
   </head>
 
-  <body>
+  <body style="background-color: #0d3642;">
       <?php include dirname(__FILE__)."/"."../components/HeaderMaster.php";
          HeaderMaster();
       ?>
 
-      <div class="container">
-        <h1 class="my-4">All users in php-example</h1>
+      <div class="container text-white">
+        <h1 class="mb-3 mt-5">Lista de todas as contas</h1>
+        <p class="mb-0 text-muted">Clique em uma conta para ser redirecionado para o login com os dados presentes.</p>
 
         <div class="list-group  my-4">
   

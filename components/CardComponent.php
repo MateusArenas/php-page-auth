@@ -9,10 +9,10 @@
   }
     
 ?>
-  <a href="#" class="list-group-item list-group-item-action <?php echo $props['active'] ? "active" : "" ?> <?php echo $props['disabled'] ? "disabled" : "" ?>">
+  <a href="<?php echo "/signin.php?email=".$props["email"]."&"."password=".$props["password"]; ?>" class="list-group-item list-group-item-action text-white <?php echo $props['active'] ? "active" : "bg-dark" ?> <?php echo $props['disabled'] ? "disabled" : "" ?>">
     <div class="d-flex flex-row w-100 py-2 pe-1">
       
-      <div style="width: 62px; height: 62px;" class="badge me-3 text-uppercase d-flex align-items-center justify-content-center fw-bold text-center bg-light text-primary border border-primary rounded-circle fs-2">
+      <div style="width: 62px; height: 62px;" class="badge me-3 text-uppercase d-flex align-items-center justify-content-center fw-bold text-center bg-dark text-primary border border-primary rounded-circle fs-2">
         <?php echo substr($letters, 0, 2) ?>
       </div>
       
