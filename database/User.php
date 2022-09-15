@@ -1,6 +1,6 @@
 <?php 
 
-  $tmpsqlite = "/data/db.sqlite";
+  $tmpsqlite = "/tmp/db.sqlite";
   if (file_exists($_SERVER['DOCUMENT_ROOT'].$tmpsqlite)) {
     $GLOBALS['SQLITE_FILE_PATH'] = $_SERVER['DOCUMENT_ROOT'].$tmpsqlite;
   } else {
@@ -22,11 +22,13 @@
           "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
           "name" VARCHAR,
           "email" VARCHAR,
+          "password" VARCHAR,
           "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )');
         $this->fields = [
           "name" => $fields["name"],
-          "email" => $fields["email"]
+          "email" => $fields["email"],
+          "password" => $fields["password"]
         ];
     }
 
@@ -52,7 +54,7 @@
     public function save () {
       try {
         if (is_writable($GLOBALS['SQLITE_FILE_PATH'])) {
-          $stmt = $this->conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
+          $stmt = $this->conn->prepare("INSERT INTO db_users (name, email, password) VALUES(:name, :email, :password)");
         
           foreach ($this->fields as $key => &$val) $stmt->bindParam($key, $val);
   
@@ -72,7 +74,7 @@
 
     public function update ($update) {
 
-      $stmt =  $this->conn->prepare("UPDATE db_users SET name = :name, email = :email WHERE _id = :id");
+      $stmt =  $this->conn->prepare("UPDATE db_users SET name = :name, email = :email, password = :password WHERE _id = :id");
     
       $this->changeFields($update);
 

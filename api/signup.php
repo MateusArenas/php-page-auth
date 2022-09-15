@@ -28,7 +28,7 @@
       // $statement->execute();
 
 
-      $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"] ]);
+      $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"], "password"=> $_POST["password"] ]);
       $ok = $user->save();
 
       // $results = User::find();
@@ -53,7 +53,9 @@
    }
 
    if($_SERVER['REQUEST_METHOD']=='POST') {
-      display();
+      if ($_POST["password"] === $_POST["confirmpass"]) {
+         display();
+      }
    } 
 
 ?>
