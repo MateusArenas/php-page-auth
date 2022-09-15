@@ -57,7 +57,7 @@
                     <!-- <div class="card-header bg-transparent border-0 text-muted">Teste de login, inscrição e sessão.</div> -->
                     <div class="card-body">
                         <h1 class="card-title fw-semibold">Let's build from here, together.</h1>
-                        <p class="card-text mb-4">O login é somente local, devido a vercel não permitir escrita nos arquivos.</p>
+                        <p class="card-text mb-4">A criação de conta é somente local, devido a vercel não permitir escrita nos arquivos.</p>
                         <form class="row g-2 mt-2" method="get" action="signup.php">
                           <div class="col-12 col-md-8">
                             <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
