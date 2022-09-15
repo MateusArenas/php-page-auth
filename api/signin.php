@@ -1,7 +1,5 @@
 
-<?php 
-
-  // require_once(dirname(__FILE__)."/"."../config.php"); 
+<?php require_once(dirname(__FILE__)."/"."../config.php"); 
 
   // function display() {
   //   $user = User::login($_POST["email"], $_POST["password"]);
@@ -18,12 +16,6 @@
   //   display();
   // } 
 
-  function getimagebasepath ($basepath) {
-    if (file_exists($_SERVER['DOCUMENT_ROOT'].$basepath)) {
-      return $_SERVER['DOCUMENT_ROOT'].$basepath;
-    }
-    return "https://php-page-auth.vercel.app".$basepath;
-  }
 
 ?>
 

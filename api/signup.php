@@ -1,4 +1,4 @@
-<?php 
+<?php require_once(dirname(__FILE__)."/"."../config.php"); 
 
    $dafault_email = isset($_GET["email"]) ? $_GET["email"] : "";
    // require_once(dirname(__FILE__)."/"."../config.php"); 
@@ -59,13 +59,6 @@
    //       display();
    //    }
    // } 
-
-   function getimagebasepath ($basepath) {
-      if (file_exists($_SERVER['DOCUMENT_ROOT'].$basepath)) {
-        return $_SERVER['DOCUMENT_ROOT'].$basepath;
-      }
-      return "https://php-page-auth.vercel.app".$basepath;
-    }
 
 ?>
 

@@ -1,5 +1,5 @@
 
-<?php 
+<?php require_once(dirname(__FILE__)."/"."../config.php"); 
 //  define('ROOT_PATH', dirname($_SERVER['DOCUMENT_ROOT']));
 
 // echo "DOCUMENT_ROOT: ".$_SERVER['DOCUMENT_ROOT'];
@@ -7,13 +7,6 @@
 // header('Location: ../dashboard');
 
   $headers = [[ "name" => "gene"] , ["name" => "mateus"]];
-
-  function getimagebasepath ($basepath) {
-    if (file_exists($_SERVER['DOCUMENT_ROOT'].$basepath)) {
-      return $_SERVER['DOCUMENT_ROOT'].$basepath;
-    }
-    return "https://php-page-auth.vercel.app".$basepath;
-  }
 
 ?>
 

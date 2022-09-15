@@ -10,4 +10,11 @@
 
   });
 
+  function getimagebasepath ($basepath) {
+    if (file_exists($_SERVER['DOCUMENT_ROOT'].$basepath)) {
+      return $_SERVER['DOCUMENT_ROOT'].$basepath;
+    }
+    return "https://php-page-auth.vercel.app".$basepath;
+  }
+
 ?>
