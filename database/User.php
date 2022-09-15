@@ -4,7 +4,7 @@
   if (file_exists($_SERVER['DOCUMENT_ROOT'].$tmpsqlite)) {
     $GLOBALS['SQLITE_FILE_PATH'] = $_SERVER['DOCUMENT_ROOT'].$tmpsqlite;
   } else {
-    $GLOBALS['SQLITE_FILE_PATH'] = $_SERVER['DOCUMENT_ROOT']."/2022".$tmpsqlite;
+    $GLOBALS['SQLITE_FILE_PATH'] = $_SERVER['DOCUMENT_ROOT']."/php-page-auth".$tmpsqlite;
   }
 
   $GLOBALS['SQLITE_URI'] = "sqlite:".$GLOBALS['SQLITE_FILE_PATH'];
