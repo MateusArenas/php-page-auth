@@ -7,7 +7,7 @@
       session_start();
 
       $_SESSION["email"] = $_POST["email"];
-      header("Location: dashboard.php");
+      exit(header("Location: dashboard.php"));
     }
     
     // echo json_encode($user);
