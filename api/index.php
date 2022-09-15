@@ -41,7 +41,7 @@
                   <div class="card border-0 bg-transparent text-white">
                     <div class="card-header bg-transparent border-0 text-muted">Teste de login, inscrição e sessão.</div>
                     <div class="card-body">
-                        <h1 class="card-title">Let's build from here, together.</h1>
+                        <h1 class="card-title fw-semibold">Let's build from here, together.</h1>
                         <p class="card-text">login funciona somente localmente, porque a vercel não permite escrita no sqlite, de uma forma acessivel em todos os arquivos php.</p>
                         <form class="row g-2" method="get" action="signup.php">
                           <div class="col-12 col-md-8">
