@@ -1,8 +1,10 @@
 
-<?php 
+<?php require_once(dirname(__FILE__)."/"."../config.php"); 
 
   function display() {
-    echo "hello".$_POST["email"];
+    $user = User::login($_POST["email"], $_POST["password"]);
+    
+    echo json_encode($user);
   }
 
   if($_SERVER['REQUEST_METHOD']=='POST') {

@@ -50,6 +50,25 @@
         die($e);
       }
     }
+
+    static function login ($email, $password) {
+      try {
+        $conn = new PDO($GLOBALS['SQLITE_URI']);
+
+        $stmt = $conn->prepare('SELECT * FROM "db_users" WHERE email = :email AND password = :password');
+
+        $stmt->bindParam('email', $email);
+        $stmt->bindParam('password', $password);
+
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $result;
+      } catch(\PDOException $e) {
+        die($e);
+      }
+    }
   
     public function save () {
       try {
