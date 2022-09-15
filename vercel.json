@@ -5,6 +5,7 @@
     }
   },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/$1" }
+    { "source": "/(.*)", "destination": "/api/$1" },
+    { "source": "/signup", "destination": "/api/" }
   ]
 }
