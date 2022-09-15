@@ -42,7 +42,7 @@
                     <div class="card-header bg-transparent border-0 text-muted">power by ( php, html & css and bootstrap )</div>
                     <div class="card-body">
                         <h1 class="card-title">Let's build from here, together.</h1>
-                        <p class="card-text">Create an account to test login, sign up and session.</p>
+                        <p class="card-text">Crie uma conta para testar o login, inscrição e sessão.</p>
                         <p class="card-text">login funciona somente localmente, porque a vercel não permite escrita no sqlite, de uma forma acessivel em todos os arquivos php.</p>
                         <form class="row g-2" method="get" action="signup.php">
                           <div class="col-12 col-md-8">
