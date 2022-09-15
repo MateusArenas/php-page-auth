@@ -1,6 +1,6 @@
 <?php 
 
-  $tmpsqlite = "/tmp/db.sqlite";
+  $tmpsqlite = "/data/db.sqlite";
   if (file_exists($_SERVER['DOCUMENT_ROOT'].$tmpsqlite)) {
     $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:".$_SERVER['DOCUMENT_ROOT'].$tmpsqlite;
   } else {

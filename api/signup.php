@@ -9,7 +9,7 @@
       // chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0664);
       // chmod($_SERVER['DOCUMENT_ROOT'].'/2022'.'/tmp/db.sqlite', '0777');
 
-      $isval = chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0777);
+      $isval = chmod($_SERVER['DOCUMENT_ROOT'].'/data/db.sqlite', 0777);
 
       echo $isval ? "ok" : "droga!";
 
