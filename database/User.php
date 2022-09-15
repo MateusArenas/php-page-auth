@@ -9,7 +9,7 @@
 
   $GLOBALS['SQLITE_URI'] = "sqlite:".$GLOBALS['SQLITE_FILE_PATH'];
 
-  echo $GLOBALS['SQLITE_FILE_PATH'];
+  // echo $GLOBALS['SQLITE_FILE_PATH'];
 
   class User {
     public $conn;
