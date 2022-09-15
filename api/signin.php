@@ -66,12 +66,12 @@
                     <form method="post" action="validate-signin.php">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">email</label>
-                          <input value="<?php echo $dafault_email ?>" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <input placeholder="name@example.com" value="<?php echo $dafault_email ?>" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label">Password</label>
                           <a class="text-decoration-none float-end" href="signin.php">Forgot password?</a>
-                          <input value="<?php echo $dafault_password ?>" name="password" type="password" class="form-control" id="exampleInputPassword1">
+                          <input placeholder="12345" value="<?php echo $dafault_password ?>" name="password" type="password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <button type="submit" class="w-100 btn btn-primary">Sign In</button>
                     </form>

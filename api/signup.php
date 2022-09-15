@@ -107,10 +107,16 @@
                      <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="<?php echo $dafault_email ?>"></div>
                      <div class="row">
                         <div class="col-12 col-lg-6">
-                           <div class="mb-3"><label for="exampleInputPassword1" class="form-label">Password</label><input type="password" class="form-control" id="exampleInputPassword1" name="password" ></div>
+                           <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Password</label>
+                              <input placeholder="name@example.com" type="password" class="form-control" id="exampleInputPassword1" name="password" >
+                           </div>
                         </div>
                         <div class="col-12 col-lg-6">
-                           <div class="mb-3"><label for="exampleInputPassword1" class="form-label">Confirm</label><input type="password" class="form-control" id="exampleInputPassword1" name="confirmpass"></div>
+                           <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Confirm</label>
+                              <input placeholder="12345" type="password" class="form-control" id="exampleInputPassword1" name="confirmpass">
+                           </div>
                         </div>
                      </div>
                      <button type="submit" class="w-100 btn btn-primary">Create Account</button>
