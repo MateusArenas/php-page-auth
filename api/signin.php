@@ -71,7 +71,7 @@
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label">Password</label>
                           <a class="text-decoration-none float-end" href="signin.php">Forgot password?</a>
-                          <input placeholder="12345" value="<?php echo $dafault_password ?>" name="password" type="password" class="form-control" id="exampleInputPassword1">
+                          <input placeholder="*****" value="<?php echo $dafault_password ?>" name="password" type="password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <button type="submit" class="w-100 btn btn-primary">Sign In</button>
                     </form>

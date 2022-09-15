@@ -103,19 +103,25 @@
                </div>
                <div class="card-body">
                   <form method="post" action="validate-signup.php">
-                     <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Name</label><input type="username" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp"></div>
-                     <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="<?php echo $dafault_email ?>"></div>
+                     <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input placeholder="full name" type="username" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp">
+                     </div>
+                     <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input placeholder="name@example.com" value="<?php echo $dafault_email ?>" type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" >
+                     </div>
                      <div class="row">
                         <div class="col-12 col-lg-6">
                            <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">Password</label>
-                              <input placeholder="name@example.com" type="password" class="form-control" id="exampleInputPassword1" name="password" >
+                              <input placeholder="*****" type="password" class="form-control" id="exampleInputPassword1" name="password" >
                            </div>
                         </div>
                         <div class="col-12 col-lg-6">
                            <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">Confirm</label>
-                              <input placeholder="12345" type="password" class="form-control" id="exampleInputPassword1" name="confirmpass">
+                              <input placeholder="*****" type="password" class="form-control" id="exampleInputPassword1" name="confirmpass">
                            </div>
                         </div>
                      </div>
