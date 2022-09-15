@@ -5,23 +5,23 @@
   // $user1 = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);
   // $user1->save();
 
-  // $users = User::find();
+  $users = User::find();
 
-  $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
+  // $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
 
-  $results = $db->query('SELECT * FROM "db_users" ORDER BY "created_at" ASC');
+  // $results = $db->query('SELECT * FROM "db_users" ORDER BY "created_at" ASC');
 
-  while ($row = $results->fetchArray()) {
+  // while ($row = $results->fetchArray()) {
     // var_dump($row);
-  };
+  // };
   
   // session_unset($_SESSION['email']);
   // echo $_SESSION['email'];
   // session_destroy();
 
   // echo session_id();
-  $users = $results->fetchArray();
-  echo json_encode($users);
+  // $users = $results->fetchArray();
+  // echo json_encode($users);
 ?>
 
 <!DOCTYPE html>

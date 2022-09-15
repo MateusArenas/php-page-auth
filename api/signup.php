@@ -5,27 +5,27 @@
 
    function display() {
       // global User;
-      echo $_SERVER['DOCUMENT_ROOT']."/2022".'/tmp/db.sqlite';
+      // echo $_SERVER['DOCUMENT_ROOT']."/2022".'/tmp/db.sqlite';
       // chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0664);
-      chmod($_SERVER['DOCUMENT_ROOT'].'/2022'.'/tmp/db.sqlite', '0777');
+      // chmod($_SERVER['DOCUMENT_ROOT'].'/2022'.'/tmp/db.sqlite', '0777');
 
-      $db = new SQLite3($_SERVER['DOCUMENT_ROOT']."/2022".'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
+      // $db = new SQLite3($_SERVER['DOCUMENT_ROOT']."/2022".'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
 
-      $db->query('CREATE TABLE IF NOT EXISTS "db_users" (
-         "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-         "name" VARCHAR,
-         "email" VARCHAR,
-         "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-      )');
+      // $db->query('CREATE TABLE IF NOT EXISTS "db_users" (
+      //    "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+      //    "name" VARCHAR,
+      //    "email" VARCHAR,
+      //    "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      // )');
 
-      $statement = $db->prepare('INSERT INTO "db_users" ("email", "name") VALUES (:email, :name)');
-      $statement->bindValue(':email', $_POST["email"]);
-      $statement->bindValue(':name', $_POST["name"]);
-      $statement->execute();
+      // $statement = $db->prepare('INSERT INTO "db_users" ("email", "name") VALUES (:email, :name)');
+      // $statement->bindValue(':email', $_POST["email"]);
+      // $statement->bindValue(':name', $_POST["name"]);
+      // $statement->execute();
 
 
-      // $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"] ]);
-      // $user->save();
+      $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"] ]);
+      $user->save();
 
       // $results = User::find();
 //   

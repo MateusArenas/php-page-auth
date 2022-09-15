@@ -2,7 +2,7 @@
 
   $tmpsqlite = "/tmp/db.sqlite";
   if (file_exists($_SERVER['DOCUMENT_ROOT'].$tmpsqlite)) {
-    $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:".$tmpsqlite;
+    $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:".$_SERVER['DOCUMENT_ROOT'].$tmpsqlite;
   } else {
     $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:".$_SERVER['DOCUMENT_ROOT']."/2022".$tmpsqlite;
   }
