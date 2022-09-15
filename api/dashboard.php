@@ -41,7 +41,7 @@
 
   </head>
 
-  <body style="background-color: #0d3642;">
+  <body style="background-color: #043150;">
       <?php include dirname(__FILE__)."/"."../components/HeaderMaster.php";
          HeaderMaster();
       ?>
