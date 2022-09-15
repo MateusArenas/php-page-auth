@@ -54,7 +54,7 @@
             <div class="col-12 col-md-6 order-2 order-md-1" style="z-index: 2;">
               <div class="row position-relative justify-content-start">
                   <div class="card border-0 bg-transparent text-white">
-                    <div class="card-header bg-transparent border-0 text-muted">Teste de login, inscrição e sessão.</div>
+                    <!-- <div class="card-header bg-transparent border-0 text-muted">Teste de login, inscrição e sessão.</div> -->
                     <div class="card-body">
                         <h1 class="card-title fw-semibold">Let's build from here, together.</h1>
                         <p class="card-text mb-4">O login é somente local, devido a vercel não permitir escrita nos arquivos, em particular sqlite.</p>
