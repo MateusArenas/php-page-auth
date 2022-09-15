@@ -5,11 +5,11 @@
 
    function display() {
       // global User;
-
+      echo $_SERVER['DOCUMENT_ROOT']."/2022".'/tmp/db.sqlite';
       // chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0664);
-      chmod('../tmp/db.sqlite', 0777);
+      chmod($_SERVER['DOCUMENT_ROOT'].'/2022'.'/tmp/db.sqlite', '0777');
 
-      $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
+      $db = new SQLite3($_SERVER['DOCUMENT_ROOT']."/2022".'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
 
       $db->query('CREATE TABLE IF NOT EXISTS "db_users" (
          "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
