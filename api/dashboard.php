@@ -1,4 +1,9 @@
-<?php require_once(dirname(__FILE__)."/"."../config.php"); 
+<?php 
+  session_start();
+
+  echo isset($_SESSION["email"]) ? $_SESSION["email"] : "unset!";
+
+  require_once(dirname(__FILE__)."/"."../config.php"); 
 
   // require(dirname(__FILE__)."/"."../database/User.php"); 
 
