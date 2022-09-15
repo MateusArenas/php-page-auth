@@ -30,7 +30,7 @@
         </div>
 
         <p class="mb-1 text-truncate"><?php echo $props['email'] ?></p>
-        <small class="text-muted">id: <?php echo $props['password'] ?></small>
+        <small class="text-muted">password: <?php echo $props['password'] ?></small>
       </div>
 
     </div>
