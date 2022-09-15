@@ -9,9 +9,9 @@
       // chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0664);
       // chmod($_SERVER['DOCUMENT_ROOT'].'/2022'.'/tmp/db.sqlite', '0777');
 
-      $isval = chmod($_SERVER['DOCUMENT_ROOT'].'/data/db.sqlite', 0777);
+      // $isval = chmod($_SERVER['DOCUMENT_ROOT'].'/data/db.sqlite', 0777);
 
-      echo $isval ? "ok" : "droga!";
+      // echo $isval ? "ok" : "droga!";
 
       // $db = new SQLite3($_SERVER['DOCUMENT_ROOT']."/2022".'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
 
@@ -29,13 +29,16 @@
 
 
       $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"] ]);
-      $user->save();
+      $ok = $user->save();
 
       // $results = User::find();
 //   
       // echo json_encode($results);
 
-      $_SESSION["email"] = $_POST["email"];
+      if ($ok) {
+         $_SESSION["email"] = $_POST["email"];
+      }
+
 
       // echo $_SERVER['REQUEST_METHOD'];
 

@@ -2,10 +2,12 @@
 
   $tmpsqlite = "/data/db.sqlite";
   if (file_exists($_SERVER['DOCUMENT_ROOT'].$tmpsqlite)) {
-    $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:".$_SERVER['DOCUMENT_ROOT'].$tmpsqlite;
+    $GLOBALS['SQLITE_FILE_PATH'] = $_SERVER['DOCUMENT_ROOT'].$tmpsqlite;
   } else {
-    $GLOBALS['SQLITE_FILE_PATH'] = "sqlite:".$_SERVER['DOCUMENT_ROOT']."/2022".$tmpsqlite;
+    $GLOBALS['SQLITE_FILE_PATH'] = $_SERVER['DOCUMENT_ROOT']."/2022".$tmpsqlite;
   }
+
+  $GLOBALS['SQLITE_URI'] = "sqlite:".$GLOBALS['SQLITE_FILE_PATH'];
 
   echo $GLOBALS['SQLITE_FILE_PATH'];
 
@@ -15,7 +17,7 @@
     public $id;
 
     public function __construct($fields) {
-        $this->conn = new PDO($GLOBALS['SQLITE_FILE_PATH']);
+        $this->conn = new PDO($GLOBALS['SQLITE_URI']);
         $this->conn->query('CREATE TABLE IF NOT EXISTS "db_users" (
           "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
           "name" VARCHAR,
@@ -30,7 +32,7 @@
 
     static function find () {
       try {
-        $conn = new PDO($GLOBALS['SQLITE_FILE_PATH']);
+        $conn = new PDO($GLOBALS['SQLITE_URI']);
         // $stmt = $this->conn->prepare('SELECT * FROM "db_users"');
 
         $stmt = $conn->query('SELECT * FROM "db_users" ORDER BY "created_at" ASC');
@@ -49,14 +51,19 @@
   
     public function save () {
       try {
+        if (is_writable($GLOBALS['SQLITE_FILE_PATH'])) {
+          $stmt = $this->conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
+        
+          foreach ($this->fields as $key => &$val) $stmt->bindParam($key, $val);
+  
+          $stmt->execute();
+  
+          $this->id = (int)$this->conn->lastInsertId();
 
-        $stmt = $this->conn->prepare("INSERT INTO db_users (name, email) VALUES(:name, :email)");
-      
-        foreach ($this->fields as $key => &$val) $stmt->bindParam($key, $val);
-
-        $stmt->execute();
-
-        $this->id = (int)$this->conn->lastInsertId();
+          return true;
+        } else {
+          return false;
+        }
         // $this->id = (int)SQLite3::lastInsertRowID();
       } catch(\PDOException $e) {
         die($e);
@@ -85,7 +92,7 @@
     }
 
     static function remove ($id) {
-      $conn = new PDO($GLOBALS['SQLITE_FILE_PATH']);
+      $conn = new PDO($GLOBALS['SQLITE_URI']);
 
       $stmt = $conn->prepare("DELETE FROM db_users WHERE _id = :id");
     
