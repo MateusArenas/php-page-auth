@@ -7,7 +7,7 @@
       // global User;
 
       // chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0664);
-      mkdir($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0777, true);
+      chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', '0777');
 
       $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', SQLITE3_OPEN_READWRITE);
 
