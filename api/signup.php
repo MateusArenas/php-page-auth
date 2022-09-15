@@ -1,4 +1,3 @@
-
 <?php require_once(dirname(__FILE__)."/"."../config.php"); 
 
    // require(dirname(__FILE__)."/"."../database/User.php"); 
@@ -36,7 +35,7 @@
       // echo json_encode($results);
 
       if ($ok) {
-         $_SESSION["email"] = $_POST["email"];
+         // $_SESSION["email"] = $_POST["email"];
          header("Location: dashboard.php");
       }
 

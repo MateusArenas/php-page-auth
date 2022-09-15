@@ -5,7 +5,7 @@
     $user = User::login($_POST["email"], $_POST["password"]);
 
     if ($user !== false) {
-      $_SESSION["email"] = $_POST["email"];
+      // $_SESSION["email"] = $_POST["email"];
       header("Location: dashboard.php");
     }
     
