@@ -39,10 +39,9 @@
             <div class="col-12 col-md-6">
               <div class="row justify-content-start">
                   <div class="card border-0 bg-transparent text-white">
-                    <div class="card-header bg-transparent border-0 text-muted">power by ( php, html & css and bootstrap )</div>
+                    <div class="card-header bg-transparent border-0 text-muted">Teste de login, inscrição e sessão.</div>
                     <div class="card-body">
                         <h1 class="card-title">Let's build from here, together.</h1>
-                        <p class="card-text">Crie uma conta para testar o login, inscrição e sessão.</p>
                         <p class="card-text">login funciona somente localmente, porque a vercel não permite escrita no sqlite, de uma forma acessivel em todos os arquivos php.</p>
                         <form class="row g-2" method="get" action="signup.php">
                           <div class="col-12 col-md-8">
