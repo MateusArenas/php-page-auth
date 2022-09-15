@@ -37,7 +37,7 @@
 
       if ($ok) {
          $_SESSION["email"] = $_POST["email"];
-         header("Location: /dashboard.php");
+         header("Location: dashboard.php");
       }
 
 
