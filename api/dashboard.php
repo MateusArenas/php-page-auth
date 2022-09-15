@@ -1,8 +1,5 @@
 <?php require_once(dirname(__FILE__)."/"."../config.php"); 
 
-
-  echo $_SESSION["email"];
-
   // require(dirname(__FILE__)."/"."../database/User.php"); 
 
   // $user1 = new User([ "name"=> "gene", "email"=> "gene@gmail.com" ]);

@@ -1,8 +1,11 @@
-<?php require_once(dirname(__FILE__)."/"."../config.php"); 
+<?php 
+
+   $dafault_email = isset($_GET["email"]) ? $_GET["email"] : "";
+   // require_once(dirname(__FILE__)."/"."../config.php"); 
 
    // require(dirname(__FILE__)."/"."../database/User.php"); 
 
-   function display() {
+   // function display() {
       // global User;
       // echo $_SERVER['DOCUMENT_ROOT']."/2022".'/tmp/db.sqlite';
       // chmod($_SERVER['DOCUMENT_ROOT'].'/tmp/db.sqlite', 0664);
@@ -27,17 +30,17 @@
       // $statement->execute();
 
 
-      $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"], "password"=> $_POST["password"] ]);
-      $ok = $user->save();
+      // $user = new User([ "name"=> $_POST["name"], "email"=> $_POST["email"], "password"=> $_POST["password"] ]);
+      // $ok = $user->save();
 
       // $results = User::find();
 //   
       // echo json_encode($results);
 
-      if ($ok) {
+      // if ($ok) {
          // $_SESSION["email"] = $_POST["email"];
-         header("Location: dashboard.php");
-      }
+         // header("Location: dashboard.php");
+      // }
 
 
       // echo $_SERVER['REQUEST_METHOD'];
@@ -49,13 +52,13 @@
       // echo json_encode($results);
       // echo "hello: ".$_POST["email"];
       // echo "hello: ".$_SERVER['REQUEST_METHOD']." : ".$user->id;
-   }
+   // }
 
-   if($_SERVER['REQUEST_METHOD']=='POST') {
-      if ($_POST["password"] === $_POST["confirmpass"]) {
-         display();
-      }
-   } 
+   // if($_SERVER['REQUEST_METHOD']=='POST') {
+   //    if ($_POST["password"] === $_POST["confirmpass"]) {
+   //       display();
+   //    }
+   // } 
 
 ?>
 
@@ -99,9 +102,9 @@
                   <h1 class="fs-4 mb-0">Sign up to php-example</h1>
                </div>
                <div class="card-body">
-                  <form method="post" action="signup.php">
+                  <form method="post" action="validate-signup.php">
                      <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Name</label><input type="username" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp"></div>
-                     <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="<?php echo isset($_GET["email"]) ? $_GET["email"] : "" ?>"></div>
+                     <div class="mb-3"><label for="exampleInputEmail1" class="form-label">Email</label><input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="<?php echo $dafault_email ?>"></div>
                      <div class="row">
                         <div class="col-12 col-lg-6">
                            <div class="mb-3"><label for="exampleInputPassword1" class="form-label">Password</label><input type="password" class="form-control" id="exampleInputPassword1" name="password" ></div>
