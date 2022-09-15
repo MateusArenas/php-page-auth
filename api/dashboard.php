@@ -21,7 +21,7 @@
 
   // echo session_id();
   // $users = $results->fetchArray();
-  // echo json_encode($users);
+  echo json_encode($users);
 ?>
 
 <!DOCTYPE html>
