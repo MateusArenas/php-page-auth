@@ -25,6 +25,21 @@
 
     <title>Hello, world!</title>
 
+    <style>
+      @media (max-width:768px)  { 
+        .position-sm-only-absolute {
+          opacity: .75 !important; 
+          margin-bottom: 16px;
+        }
+        
+        .position-sm-only-absolute .logo-content {
+          width: 160px !important;
+          height: 160px !important;
+          scale: 2.1 !important;
+        }
+      }
+    </style>
+
   </head>
 
   <body style="background-color: #0d3642;">
@@ -36,14 +51,14 @@
 
       <div class="container-fluid py-5">
         <div class="row align-items-center px-md-5">
-            <div class="col-12 col-md-6">
-              <div class="row justify-content-start">
+            <div class="col-12 col-md-6 order-2 order-md-1" style="z-index: 2;">
+              <div class="row position-relative justify-content-start">
                   <div class="card border-0 bg-transparent text-white">
                     <div class="card-header bg-transparent border-0 text-muted">Teste de login, inscrição e sessão.</div>
                     <div class="card-body">
                         <h1 class="card-title fw-semibold">Let's build from here, together.</h1>
-                        <p class="card-text">O login é somente local, devido a vercel não permitir escrita nos arquivos, em particular sqlite.</p>
-                        <form class="row g-2" method="get" action="signup.php">
+                        <p class="card-text mb-4">O login é somente local, devido a vercel não permitir escrita nos arquivos, em particular sqlite.</p>
+                        <form class="row g-2 mt-2" method="get" action="signup.php">
                           <div class="col-12 col-md-8">
                             <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                           </div>
@@ -55,9 +70,9 @@
                   </div>
               </div>
             </div>
-            <div class="col-12 col-md-6">
-              <div class="row justify-content-end px-4">
-                  <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+            <div class="col-12 col-md-6 order-1 order-md-2 position-sm-only-absolute" style="z-index: 1;">
+              <div class="row overflow-hidden justify-content-center justify-content-md-end px-4">
+                  <span class="logo-content" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
                     <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
                       <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27569%27%20height=%27555%27/%3e">
                     </span>
