@@ -55,7 +55,10 @@
             foreach ($users as $user) {
               if (isset($_SESSION["email"]) ? $_SESSION["email"] : "" === $user["email"]) {
                 CardComponent([ 
-                  ...$user, 
+                  "id"=> $user["id"],
+                  "email"=> $user["email"],
+                  "name"=> $user["name"],
+                  "created_at"=> $user["created_at"],
                   "disabled"=> false,
                   "active"=> true,
                   "time"=> date_format(date_create($user["created_at"]),"Y/m/d") 
@@ -70,7 +73,10 @@
   
           <?php require_once dirname(__FILE__)."/"."../components/CardComponent.php";
             foreach ($users as $user) CardComponent([ 
-              ...$user, 
+              "id"=> $user["id"],
+              "email"=> $user["email"],
+              "name"=> $user["name"],
+              "created_at"=> $user["created_at"],
               "disabled"=> isset($_SESSION["email"]) ? $_SESSION["email"] : "" === $user["email"],
               "active"=> false,
               "time"=> date_format(date_create($user["created_at"]),"Y/m/d") 
