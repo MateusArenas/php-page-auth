@@ -5,7 +5,9 @@
 
     if ($user !== false) {
       $_SESSION["email"] = $_POST["email"];
-      exit(header("Location: dashboard.php"));
+      exit(header("Location: auth-success.php"));
+    } else {
+      exit(header("Location: auth-failure.php"));
     }
     
   }

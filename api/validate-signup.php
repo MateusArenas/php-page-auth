@@ -5,8 +5,10 @@
       $ok = $user->save();
 
       if ($ok) {
-        $_SESSION["email"] = $_POST["email"];
-        exit(header("Location: dashboard.php"));
+         $_SESSION["email"] = $_POST["email"];
+         exit(header("Location: auth-success.php"));
+      } else {
+         exit(header("Location: auth-failure.php"));
       }
    }
 
