@@ -42,7 +42,7 @@
                     <div class="card-header bg-transparent border-0 text-muted">Teste de login, inscrição e sessão.</div>
                     <div class="card-body">
                         <h1 class="card-title fw-semibold">Let's build from here, together.</h1>
-                        <p class="card-text">login funciona somente localmente, porque a vercel não permite escrita no sqlite, de uma forma acessivel em todos os arquivos php.</p>
+                        <p class="card-text">O login é somente local, devido a vercel não permitir escrita nos arquivos, em particular sqlite.</p>
                         <form class="row g-2" method="get" action="signup.php">
                           <div class="col-12 col-md-8">
                             <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
