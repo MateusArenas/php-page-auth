@@ -67,7 +67,7 @@
                   <div class="card-body">
                     <form method="post" action="validate-signin.php">
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">email</label>
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
                           <input placeholder="name@example.com" value="<?php echo $dafault_email ?>" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">

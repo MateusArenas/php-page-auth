@@ -122,7 +122,7 @@
                         </div>
                         <div class="col-12 col-lg-6">
                            <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Confirm</label>
+                              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                               <input placeholder="*****" type="password" class="form-control" id="exampleInputPassword1" name="confirmpass">
                            </div>
                         </div>

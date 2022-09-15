@@ -50,8 +50,6 @@
         <h1 class="mb-3 mt-4 mt-md-5">Lista de todas as contas</h1>
         <p class="mb-0 text-muted">Clique em uma conta para ser redirecionado para o login com os dados presentes.</p>
 
-
-  
         <div class="list-group my-4">
   
           <?php require_once dirname(__FILE__)."/"."../components/CardComponent.php";
@@ -63,7 +61,7 @@
               "created_at"=> $user["created_at"],
               "disabled"=> isset($_SESSION["email"]) ? $_SESSION["email"] : "" === $user["email"],
               "active"=> isset($_SESSION["email"]) ? $_SESSION["email"] : "" === $user["email"],
-              "time"=> date_format(date_create($user["created_at"]),"Y/m/d") 
+              "time"=> date_format(date_create($user["created_at"]),"d/m/Y") 
             ]);
           ?>
   
