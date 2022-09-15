@@ -5,8 +5,6 @@
       $ok = $user->save();
 
       if ($ok) {
-        session_start();
-
         $_SESSION["email"] = $_POST["email"];
         header("Location: dashboard.php");
       }
