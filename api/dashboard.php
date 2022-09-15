@@ -47,29 +47,10 @@
       ?>
 
       <div class="container text-white">
-        <h1 class="mb-3 mt-5">Lista de todas as contas</h1>
+        <h1 class="mb-3 mt-4 mt-md-5">Lista de todas as contas</h1>
         <p class="mb-0 text-muted">Clique em uma conta para ser redirecionado para o login com os dados presentes.</p>
 
-        <div class="list-group  my-4">
-  
-          <?php require_once dirname(__FILE__)."/"."../components/CardComponent.php";
-            foreach ($users as $user) {
-              if (isset($_SESSION["email"]) ? $_SESSION["email"] : "" === $user["email"]) {
-                CardComponent([ 
-                  "id"=> $user["id"],
-                  "email"=> $user["email"],
-                  "name"=> $user["name"],
-                  "password"=> $user["password"],
-                  "created_at"=> $user["created_at"],
-                  "disabled"=> false,
-                  "active"=> true,
-                  "time"=> date_format(date_create($user["created_at"]),"Y/m/d") 
-                ]);
-              }
-            }
-          ?>
 
-        </div>
   
         <div class="list-group my-4">
   
@@ -81,7 +62,7 @@
               "password"=> $user["password"],
               "created_at"=> $user["created_at"],
               "disabled"=> isset($_SESSION["email"]) ? $_SESSION["email"] : "" === $user["email"],
-              "active"=> false,
+              "active"=> isset($_SESSION["email"]) ? $_SESSION["email"] : "" === $user["email"],
               "time"=> date_format(date_create($user["created_at"]),"Y/m/d") 
             ]);
           ?>

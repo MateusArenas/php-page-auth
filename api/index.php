@@ -29,7 +29,7 @@
       @media (max-width:768px)  { 
         .position-sm-only-absolute {
           opacity: .75 !important; 
-          margin-bottom: 16px;
+          /* margin-bottom: 16px; */
         }
         
         .position-sm-only-absolute .logo-content {
@@ -49,16 +49,18 @@
         // foreach ($headers as $header) HeaderMaster($header);
       ?>
 
-      <div class="container-fluid py-5">
+      <div class="container-fluid py-4 py-md-5">
         <div class="row align-items-center px-md-5">
             <div class="col-12 col-md-6 order-2 order-md-1" style="z-index: 2;">
               <div class="row position-relative justify-content-start">
                   <div class="card border-0 bg-transparent text-white">
-                    <!-- <div class="card-header bg-transparent border-0 text-muted">Teste de login, inscrição e sessão.</div> -->
+                    <div class="card-header bg-transparent border-0 text-muted pb-0">
+                      <a href="dashboard.php" class="text-decoration-none">Go to dashboard</a>
+                    </div>
                     <div class="card-body">
                         <h1 class="card-title fw-semibold">Let's build from here, together.</h1>
-                        <p class="card-text mb-4">A criação de conta é somente local, devido a vercel não permitir escrita nos arquivos.</p>
-                        <form class="row g-2 mt-2" method="get" action="signup.php">
+                        <p class="card-text mb-4 text-muted">A criação de conta é somente local, devido a vercel não permitir escrita nos arquivos.</p>
+                        <form class="row g-2" method="get" action="signup.php">
                           <div class="col-12 col-md-8">
                             <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                           </div>
