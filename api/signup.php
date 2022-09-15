@@ -1,10 +1,6 @@
 
 <?php require_once(dirname(__FILE__)."/"."../config.php"); 
 
-   if (!is_writable($GLOBALS['SQLITE_FILE_PATH'])) {
-      header("Location: /dashboard.php");
-   }
-
    // require(dirname(__FILE__)."/"."../database/User.php"); 
 
    function display() {
