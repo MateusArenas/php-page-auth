@@ -1,20 +1,21 @@
 
-<?php require_once(dirname(__FILE__)."/"."../config.php"); 
+<?php 
+  // require_once(dirname(__FILE__)."/"."../config.php"); 
 
-  function display() {
-    $user = User::login($_POST["email"], $_POST["password"]);
+  // function display() {
+  //   $user = User::login($_POST["email"], $_POST["password"]);
 
-    if ($user !== false) {
-      // $_SESSION["email"] = $_POST["email"];
-      header("Location: dashboard.php");
-    }
+  //   if ($user !== false) {
+  //     // $_SESSION["email"] = $_POST["email"];
+  //     header("Location: dashboard.php");
+  //   }
     
-    echo json_encode($user);
-  }
+  //   echo json_encode($user);
+  // }
 
-  if($_SERVER['REQUEST_METHOD']=='POST') {
-    display();
-  } 
+  // if($_SERVER['REQUEST_METHOD']=='POST') {
+  //   display();
+  // } 
 ?>
 
 
@@ -57,7 +58,7 @@
                     <h1 class="fs-4 mb-0">Sign in to php-example</h1>
                   </div>
                   <div class="card-body">
-                    <form method="post" action="signin.php">
+                    <form method="post" action="validate-signin.php">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">email</label>
                           <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
