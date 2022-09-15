@@ -5,7 +5,7 @@
     }
   },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/$1" },
-    { "source": "/signup.php", "destination": "/api/" }
+    { "source": "/signup.php", "destination": "/api/" },
+    { "source": "/(.*)", "destination": "/api/$1" }
   ]
 }
