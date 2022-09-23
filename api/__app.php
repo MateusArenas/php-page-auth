@@ -5,8 +5,8 @@
   $page = $_GET['page'] ? $_GET['page'] : 'index';
   include("{$page}.php"); 
 
-
-  // echo "in __app";
+  
+  echo $page;
 ?>
 
 <!DOCTYPE html>
