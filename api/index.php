@@ -1,31 +1,10 @@
-
 <?php require_once(dirname(__FILE__)."/"."../config.php"); 
-//  define('ROOT_PATH', dirname($_SERVER['DOCUMENT_ROOT']));
-
-// echo "DOCUMENT_ROOT: ".$_SERVER['DOCUMENT_ROOT'];
-// echo "ROOT_PATH: ".$_SERVER['ROOT_PATH'];
-// header('Location: ../dashboard');
-
   $headers = [[ "name" => "gene"] , ["name" => "mateus"]];
-
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <?php include dirname(__FILE__)."/"."../loaderStyleSheets.php";
-        loaderStyleSheets();
-    ?>
-
-    <title>Hello, world!</title>
-
-    <style>
+<?php function RenderHeadComponent($props=[]) { ?>
+  <title>HOME</title>
+  <style>
       @media (max-width:768px)  { 
         .position-sm-only-absolute {
           opacity: .75 !important; 
@@ -38,17 +17,12 @@
           scale: 2.1 !important;
         }
       }
-
     </style>
+<?php } ?>
 
-  </head>
-
-  <body style="background-color: #043150;">
-
-      <?php include dirname(__FILE__)."/"."../components/HeaderMaster.php";
-        HeaderMaster();
-        // foreach ($headers as $header) HeaderMaster($header);
-      ?>
+<?php function RenderComponent($props=[]) { ?>
+  <main style="background-color: #043150;">
+    <a href="product">cagaio</a>
 
       <div class="container-fluid py-4 py-md-5">
         <div class="row align-items-center px-md-5">
@@ -61,7 +35,7 @@
                     <div class="card-body">
                         <h1 class="card-title fw-semibold">Let's build from here, together.</h1>
                         <p class="card-text mb-4 text-muted">A criação de conta é somente local, devido a vercel não permitir escrita nos arquivos.</p>
-                        <form class="row g-2" method="get" action="signup.php">
+                        <form class="row g-2" method="get" action="signup">
                           <div class="col-12 col-md-8">
                             <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                           </div>
@@ -87,10 +61,5 @@
             </div>
         </div>
       </div>
-
-  </body>
-
-  <?php include dirname(__FILE__)."/"."../loaderBottomScripts.php";
-    loaderBottomScripts();
-  ?>
-</html>
+  </main>
+<?php } ?>

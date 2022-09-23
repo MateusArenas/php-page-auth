@@ -1,7 +1,18 @@
 RewriteEngine On
 RewriteBase /php-page-auth/
 
+# RewriteCond %{THE_REQUEST} /api/([^\s?]*) [NC]
+
+# RewriteRule ^/api/product/(.+)/(\d+)/$ api/product.php?id=$1 [L,NC]
+# RewriteRule ^ %1 [L,NE,R=302]
+
 RewriteCond %{THE_REQUEST} /api/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
 
-RewriteRule ^((?!api/).*)$ api/$1 [L,NC]
+# RewriteRule ^((?!api/).*)$ /api/product.php?id=$1 [L,NC]
+
+RewriteRule ^((?!api/).*)$ api/__app.php?page=$1 [L,NC]
+
+
+# RewriteRule ^api/(.+)$ api/__app.php?page=$1 [L,NC]
+
